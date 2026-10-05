@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact VantaChem</title>
-<meta http-equiv="refresh" content="0; url=mailto:mmain@vanta-chem.com?subject=Vanta%20Advantage%20Dashboard%20Question">
 <style>
   body{font-family:Segoe UI,Arial,sans-serif;background:#fff;color:#4D4F4F;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center}
   .box{border:3px solid #799B2C;border-radius:12px;padding:32px 40px;max-width:420px}
@@ -19,6 +18,16 @@
     <p>If nothing happens, click below to email Mark Main.</p>
     <a href="mailto:mmain@vanta-chem.com?subject=Vanta%20Advantage%20Dashboard%20Question">Email mmain@vanta-chem.com</a>
   </div>
-<script>window.location.href="mailto:mmain@vanta-chem.com?subject=Vanta%20Advantage%20Dashboard%20Question";</script>
+<script>
+  window.location.href = "mailto:mmain@vanta-chem.com?subject=Vanta%20Advantage%20Dashboard%20Question";
+  setTimeout(function () {
+    window.close();
+    // If the browser refuses to close the tab, update the message instead
+    setTimeout(function () {
+      document.querySelector("h1").textContent = "Your email is ready";
+      document.querySelector("p").textContent = "You can close this tab. If your email didn't open, use the button below.";
+    }, 300);
+  }, 1500);
+</script>
 </body>
 </html>
